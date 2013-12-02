@@ -38,6 +38,9 @@ node_modules
 dist
 .sass-cache
 
+# Files to ignore
+compass_app_log.txt
+
 # Ghost Template specific files / folders
 
 b-cov
