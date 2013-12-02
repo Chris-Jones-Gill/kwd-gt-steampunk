@@ -37,7 +37,6 @@ nbproject
 node_modules
 dist
 .sass-cache
-*bower*
 
 
 # Files to ignore
@@ -65,5 +64,6 @@ node_modules
 *.iml
 projectFilesBackup
 
-*bower_components*
-*stylesheets*
+assets/sass/bower_components
+assets/sass/stylesheets
+assets/sass/stylesheets/screeen.css
