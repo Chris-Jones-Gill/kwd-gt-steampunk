@@ -63,4 +63,6 @@ node_modules
 *.iml
 projectFilesBackup
 
-.DS_Store
+stylesheets/*
+
+bower_components/*
