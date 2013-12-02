@@ -1,0 +1,69 @@
+@import "compass";
+
+$steampunk-border: #a47c31;
+$steampunk-button-dark: rgba(177,131,41,1);
+$steampunk-button-light: rgba(221,205,172,1);
+$button-text: black;
+$text-shadow-hover: #808000;
+$steampunk-darken: 2%;
+
+$success-button-font-color: blue;
+$alert-button-font-color: yellow;
+
+button,
+.button {
+  font-family: $info-font-family;  
+}
+
+@mixin steampunk-button {
+  @include button-base();
+  @include button-size();
+  font-family: $info-font-family;  
+  color: $button-text;  
+  background-color: rgb(177,131,41); // Old browsers
+  @include filter-gradient(#b18329, #b18329, vertical); // IE6-8
+  // IE9 SVG, needs conditional override of 'filter' to 'none'
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top,  $steampunk-button-dark 0%,$steampunk-button-light 47%,$steampunk-button-dark 100%));
+}
+
+.button-steampunk {
+  @include steampunk-button;
+  border: 1px outset $steampunk-border;
+  transition: ease-in-out 0.1s all; 
+  width: 100%;
+  max-width: 15.5em;
+  
+  &:hover,
+  &:focus {
+    color: $button-text;
+    font-weight: bold;  
+    border-color: darken($steampunk-border, $steampunk-darken);
+    background-color: darken(rgb(177,131,41), $steampunk-darken); // Old browsers
+    @include filter-gradient(darken(#b18329, $steampunk-darken), darken(#b18329, $steampunk-darken), vertical); // IE6-8
+    // IE9 SVG, needs conditional override of 'filter' to 'none'
+    $experimental-support-for-svg: true;
+    @include background-image(linear-gradient(top,  darken($steampunk-button-dark, $steampunk-darken) 0%,darken($steampunk-button-light, $steampunk-darken) 47%,darken($steampunk-button-dark, $steampunk-darken) 100%));
+    transition: ease-in-out 0.1s all;    
+  }
+  
+  &:active {
+    @include steampunk-button;
+    font-weight: bold;  
+    border: 1px inset $steampunk-border;
+  }
+}
+
+button.success, 
+.button.success,
+button.success:hover, 
+.button.success:hover {
+  color: $success-button-font-color;
+}
+
+button.alert,
+.button.alert,
+button.alert:hover,
+.button.alert:hover {
+  color: $alert-button-font-color;
+}
