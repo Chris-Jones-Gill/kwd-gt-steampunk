@@ -69,7 +69,7 @@ $global-rounded: 1000px;
 $shiny-edge-size: 0 1px 0;
 $shiny-edge-color: rgba(#fff, .5);
 $shiny-edge-active-color: rgba(#000, .2);
-
+#kwd-gt-steampunk {
 // Media Query Ranges
 $small-range: (0em, 40em);
 $medium-range: (40.063em, 64em);
@@ -997,3 +997,4 @@ $topbar-divider-border-top: solid 1px darken($topbar-bg-color, 10%);
 // Sticky Class
 $topbar-sticky-class: ".sticky";
 $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
+}
