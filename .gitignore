@@ -37,6 +37,8 @@ nbproject
 node_modules
 dist
 .sass-cache
+*bower*
+
 
 # Files to ignore
 compass_app_log.txt
@@ -63,5 +65,5 @@ node_modules
 *.iml
 projectFilesBackup
 
-*bower_components/*
-*stylesheets/*
+*bower_components*
+*stylesheets*
