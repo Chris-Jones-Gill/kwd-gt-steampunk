@@ -63,6 +63,5 @@ node_modules
 *.iml
 projectFilesBackup
 
-stylesheets/*
-
-bower_components/*
+*/bower_components/*
+*/stylesheets/*
