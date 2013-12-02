@@ -65,5 +65,6 @@ node_modules
 projectFilesBackup
 
 assets/sass/bower_components
+assets/sass/bower_components/*
 assets/sass/stylesheets
 assets/sass/stylesheets/screeen.css
