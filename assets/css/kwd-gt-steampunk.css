@@ -82,6 +82,9 @@
    2. General - Setting up some base styles
    ========================================================================== */
 
+font-family: 'Istok Web', sans-serif;
+
+
 html {
     height: 100%;
     max-height: 100%;
@@ -95,6 +98,7 @@ body {
     font-size: 2.0rem;
     line-height: 1.6em;
     color: #3A4145;
+	font-family: 'Crimson Text', serif;
 }
 
 ::-moz-selection {
@@ -456,7 +460,7 @@ margin on the iframe, cause it breaks stuff. */
 .post-meta {
     display: inline-block;
     margin: 0 0 5px 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Istok Web', sans-serif;
     font-size: 1.5rem;
     color: #9EABB3;
 }
@@ -474,6 +478,7 @@ margin on the iframe, cause it breaks stuff. */
     position: relative;
     padding: 0.3rem 40px 0 100px;
     min-height: 77px;
+    font-family: 'Istok Web', sans-serif;
 }
 
 .user-image {
@@ -485,6 +490,7 @@ margin on the iframe, cause it breaks stuff. */
 .user-name {
     display: block;
     font-weight: bold;
+    font-family: 'Dancing Script', cursive;
 }
 
 .user-bio {
@@ -500,17 +506,20 @@ margin on the iframe, cause it breaks stuff. */
     right: 0;
     padding: 4.3rem 0 4rem 0;
     text-align: right;
+    font-family: 'Istok Web', sans-serif;
 }
 
 .publish-heading {
     display: block;
     font-weight: bold;
+    font-family: 'Istok Web', sans-serif;
 }
 
 .publish-date {
     display: block;
     font-size: 1.4rem;
     line-height: 1.5em;
+    font-family: 'Dancing Script', cursive;
 }
 
 /* ==========================================================================
@@ -554,6 +563,7 @@ margin on the iframe, cause it breaks stuff. */
     margin: 4rem 0 0 0;
     padding: 4rem 0 0 0;
     border-top: #EBF2F6 1px solid;
+    font-family: 'Istok Web', sans-serif;
 }
 
 .post-footer h4 {
@@ -570,7 +580,7 @@ margin on the iframe, cause it breaks stuff. */
 /* Create some space to the right for the share links */
 .post-footer .author {
     margin-right: 180px;
-}
+    font-family: 'Dancing Script', cursive;
 
 /* Drop the share links in the space to the right.
    Doing it like this means it's easier for the author bio
