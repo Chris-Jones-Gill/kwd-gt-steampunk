@@ -82,9 +82,6 @@
    2. General - Setting up some base styles
    ========================================================================== */
 
-font-family: 'Istok Web', sans-serif;
-
-
 html {
     height: 100%;
     max-height: 100%;
@@ -92,13 +89,14 @@ html {
 }
 
 body {
+    text-rendering: optimizeLegibility;
     height: 100%;
     max-height: 100%;
-    font-family: 'Noto Serif', serif;
     font-size: 2.0rem;
     line-height: 1.6em;
     color: #3A4145;
-	font-family: 'Crimson Text', serif;
+    font-family: 'Crimson Text', serif;
+    background: url("../images/bgs-2.png") repeat-y scroll 0 0 / contain  rgba(0, 0, 0, 0);
 }
 
 ::-moz-selection {
@@ -118,7 +116,7 @@ h4, h5, h6 {
     text-rendering: optimizeLegibility;
     line-height: 1;
     margin-top: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Istok Web', sans-serif;
 }
 
 h1 {
@@ -142,7 +140,9 @@ h3 {
 h4 {
     font-size: 3rem;
 }
-
+.author > h4 {
+	font-family: 'Dancing Script', cursive;
+}
 h5 {
     font-size: 2.5rem;
 }
@@ -337,7 +337,43 @@ margin on the iframe, cause it breaks stuff. */
     margin: 0;
 }
 
-
+/* Fixed to bottom menu */
+nav.fixedBottom {
+	font-family: 'Istok Web', sans-serif;
+	font-weight: bold;
+    bottom: 0;
+    position: fixed;
+    padding-bottom: 0.1em;
+    padding-top: 0.1em;
+    text-align: center;
+    width: 100%;
+    color: #833B15;
+	background: rgb(164,117,24); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2E0NzUxOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2Q5YzlhOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhNDc1MTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  rgba(164,117,24,1) 0%, rgba(217,201,169,1) 50%, rgba(164,117,24,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(164,117,24,1)), color-stop(50%,rgba(217,201,169,1)), color-stop(100%,rgba(164,117,24,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(164,117,24,1) 0%,rgba(217,201,169,1) 50%,rgba(164,117,24,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(164,117,24,1) 0%,rgba(217,201,169,1) 50%,rgba(164,117,24,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(164,117,24,1) 0%,rgba(217,201,169,1) 50%,rgba(164,117,24,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(164,117,24,1) 0%,rgba(217,201,169,1) 50%,rgba(164,117,24,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a47518', endColorstr='#a47518',GradientType=0 ); /* IE6-8 */
+}
+nav.fixedBottom ul {
+    display: inline;
+    list-style: none outside none;
+}
+nav.fixedBottom ul li {
+    display: inline;
+    padding: 0.5em;
+}
+nav.fixedBottom ul li a {
+    text-decoration: none;
+    color: #603539;
+}
+nav.fixedBottom ul li a:hover {
+    color: #872C35;
+}
 /* ==========================================================================
    3. Utilities - These things get used a lot
    ========================================================================== */
@@ -370,17 +406,21 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Big cover image on the home page */
 .site-head {
-    position: relative;
+    background: url("../images/sp.jpg") no-repeat scroll center center #808080;
+    color: #FFFFFF;
     display: table;
-    width: 100%;
     height: 60%;
     margin-bottom: 5rem;
+    position: relative;
     text-align: center;
-    color: #fff;
-    background: #303538 no-repeat center center;
-    background-size: cover;
+    width: 100%;
+    background-size: auto;
+    transition: background-size ease-in-out 1s;
 }
-
+.site-head-content h2 {
+    font-family: 'Dancing Script',cursive;
+    font-size: 4rem;
+}
 .blog-logo {
     text-decoration: none;
 }
@@ -414,33 +454,29 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
-    position: relative;
-    width:80%;
-    max-width: 700px;
+    border-bottom: 1px solid #833B15;
     margin: 4rem auto;
+    max-width: 35em;
     padding-bottom: 4rem;
-    border-bottom: #EBF2F6 1px solid;
-    word-break: break-word;
-    hyphens: auto;
+    position: relative;
+    width: 60%;
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
 .post:after {
-    display: block;
-    content: "";
-    width: 7px;
-    height: 7px;
-    border: #E7EEF2 1px solid;
-    position: absolute;
+    background: none repeat scroll 0 0 #E6CFB0;
+    border: 1px solid #833B15;
+    border-radius: 100%;
     bottom: -5px;
+    box-shadow: 0 0 0 5px #D7BA92;
+    content: "";
+    display: block;
+    height: 7px;
     left: 50%;
     margin-left: -5px;
-    background: #fff;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
-    box-shadow: #fff 0 0 0 5px;
+    position: absolute;
+    width: 7px;
 }
 
 .post-title {
@@ -448,6 +484,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .post-title a {
+    color: #833B15;
     text-decoration: none;
 }
 
@@ -462,9 +499,11 @@ margin on the iframe, cause it breaks stuff. */
     margin: 0 0 5px 0;
     font-family: 'Istok Web', sans-serif;
     font-size: 1.5rem;
-    color: #9EABB3;
+    color: #D59057;
 }
-
+.post-meta time {
+	font-family: 'Dancing Script', cursive;
+}
 .post-meta a {
     color: #9EABB3;
     text-decoration: none;
@@ -478,7 +517,6 @@ margin on the iframe, cause it breaks stuff. */
     position: relative;
     padding: 0.3rem 40px 0 100px;
     min-height: 77px;
-    font-family: 'Istok Web', sans-serif;
 }
 
 .user-image {
@@ -490,7 +528,6 @@ margin on the iframe, cause it breaks stuff. */
 .user-name {
     display: block;
     font-weight: bold;
-    font-family: 'Dancing Script', cursive;
 }
 
 .user-bio {
@@ -506,13 +543,11 @@ margin on the iframe, cause it breaks stuff. */
     right: 0;
     padding: 4.3rem 0 4rem 0;
     text-align: right;
-    font-family: 'Istok Web', sans-serif;
 }
 
 .publish-heading {
     display: block;
     font-weight: bold;
-    font-family: 'Istok Web', sans-serif;
 }
 
 .publish-date {
@@ -533,6 +568,24 @@ margin on the iframe, cause it breaks stuff. */
     padding-bottom: 0;
 }
 
+/* cover image on each post page */
+.post-head {
+    background: url("../images/sp.jpg") no-repeat scroll -600px -300px #808080;
+    color: #FFFFFF;
+    display: table;
+    height: 200px;
+    margin-bottom: 5rem;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    background-size: auto;
+    transition: background-size ease-in-out 1s;
+}
+.post-head-content h2 {
+    font-family: 'Dancing Script',cursive;
+    font-size: 4rem;
+}
+
 /* Kill that stylish little circle that was on the border, too */
 .post-template .post:after {
     display: none;
@@ -546,7 +599,7 @@ margin on the iframe, cause it breaks stuff. */
 
 .post-template .blog-title {
     display: inline-block;
-    padding: 2.5rem 0;
+    padding: 0;
 }
 
 /* Keep large images within the bounds of the post-width */
@@ -563,7 +616,6 @@ margin on the iframe, cause it breaks stuff. */
     margin: 4rem 0 0 0;
     padding: 4rem 0 0 0;
     border-top: #EBF2F6 1px solid;
-    font-family: 'Istok Web', sans-serif;
 }
 
 .post-footer h4 {
@@ -581,6 +633,7 @@ margin on the iframe, cause it breaks stuff. */
 .post-footer .author {
     margin-right: 180px;
     font-family: 'Dancing Script', cursive;
+}
 
 /* Drop the share links in the space to the right.
    Doing it like this means it's easier for the author bio
@@ -680,24 +733,25 @@ margin on the iframe, cause it breaks stuff. */
 
 .site-footer {
     position: relative;
+    bottom: 2em;
     margin: 8rem 0 0 0;
     padding: 4rem 0;
-    border-top: #EBF2F6 1px solid;
+    border-top: 1px solid #B3790B;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
     line-height: 1.7em;
-    color: #BBC7CC;
+    color: #D59057;
     text-align: center;
-    background: #F7FAFB;
+    background: none repeat scroll 0 0 #833B15;
 }
 
 .site-footer a {
-    color: #BBC7CC;
+    color: #E6CFB0;
     text-decoration: underline;
 }
 
 .site-footer a:hover {
-    color: #50585D;
+    color: #BBC7CC;
 }
 
 .poweredby .icon-ghost {
@@ -722,17 +776,17 @@ margin on the iframe, cause it breaks stuff. */
     top: -14px;
     left: 50%;
     margin-left: -15px;
-    border: #EBF2F6 1px solid;
+    /* border: #EBF2F6 1px solid; */
     text-align: center;
     line-height: 2.4rem;
     border-radius: 50px;
-    background: #fff;
+    background: none repeat scroll 0 0 #D4B281;
     transition: box-shadow 0.5s;
 }
 
 /* The RSS icon, inserted via icon font */
 .subscribe:before {
-    color: #D2DEE3;
+    color: #B3790B;
     font-size: 10px;
     position: absolute;
     top: 9px;
@@ -743,12 +797,12 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Add a box shadow to on hover */
 .subscribe:hover {
-    box-shadow: rgba(0,0,0,0.05) 0 0 0 3px;
+    box-shadow: 0 0 0 3px rgba(131, 59, 21, 0.2);
     transition: box-shadow 0.25s;
 }
 
 .subscribe:hover:before {
-    color: #50585D;
+    color: #833B15;
 }
 
 /* CSS tooltip saying "Subscribe!" - initially hidden */
@@ -805,9 +859,6 @@ margin on the iframe, cause it breaks stuff. */
         -webkit-box-sizing: border-box; 
         -moz-box-sizing: border-box;
         box-sizing: border-box; 
-        height: auto;
-        min-height: 240px;
-        padding: 15% 0;
     }
 
     .blog-title {
@@ -876,10 +927,6 @@ margin on the iframe, cause it breaks stuff. */
         margin-right: 16px;
         font-size: 0.8em;
         line-height: 1.6em;
-    }
-
-    .site-head {
-        padding: 10% 0;
     }
 
     .blog-title {

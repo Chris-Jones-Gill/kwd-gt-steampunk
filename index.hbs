@@ -16,7 +16,8 @@
 
 {{! The main content area on the homepage }}
 <main class="content" role="main">
-
+	<div class="mainContainer">
+<div class="mainLeft">
     {{! Each post will be output using this markup }}
     {{#foreach posts}}
 
@@ -35,5 +36,6 @@
 
     {{!! After all the posts, we have the previous/next pagination links }}
     {{pagination}}
-
+</div>
+</div>
 </main>
