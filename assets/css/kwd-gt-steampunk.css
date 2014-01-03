@@ -98,6 +98,28 @@ a.twitter-icon:hover {
 a.twitter-icon:active {
     background-image: url("../images/twitter-clicked.png");	
 }
+
+a.facebook-icon {
+    background-attachment: inherit;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("../images/facebook-default.png");
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    transform: rotate(-360deg);
+    transition: transform 0.7s ease-in-out 0.1s;    
+}
+a.facebook-icon:hover {
+    background-image: url("../images/facebook-hover.png");
+    transform: rotate(360deg);
+    transition: transform 0.7s ease-in-out 0s;    
+}
+a.facebook-icon:active {
+    background-image: url("../images/facebook-clicked.png");	
+}
 /* ==========================================================================
    2. General - Setting up some base styles
    ========================================================================== */
