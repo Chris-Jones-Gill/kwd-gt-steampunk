@@ -85,20 +85,19 @@ a.twitter-icon {
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100px;
-    width: 100px;
+    height: 90px;
     transform: rotate(-360deg);
-    transition: transform 0.7s ease-in-out 0.1s;    
+    transition: transform 0.7s ease-in-out 0.1s;
+    width: 90px;
 }
 a.twitter-icon:hover {
     background-image: url("../images/twitter-hover.png");
     transform: rotate(360deg);
-    transition: transform 0.7s ease-in-out 0s;    
+    transition: transform 0.7s ease-in-out 0s;
 }
 a.twitter-icon:active {
-    background-image: url("../images/twitter-clicked.png");	
+    background-image: url("../images/twitter-clicked.png");
 }
-
 a.facebook-icon {
     background-attachment: inherit;
     background-color: rgba(0, 0, 0, 0);
@@ -107,20 +106,19 @@ a.facebook-icon {
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100px;
-    width: 100px;
+    height: 90px;
     transform: rotate(-360deg);
-    transition: transform 0.7s ease-in-out 0.1s;    
+    transition: transform 0.7s ease-in-out 0.1s;
+    width: 90px;
 }
 a.facebook-icon:hover {
     background-image: url("../images/facebook-hover.png");
     transform: rotate(360deg);
-    transition: transform 0.7s ease-in-out 0s;    
+    transition: transform 0.7s ease-in-out 0s;
 }
 a.facebook-icon:active {
-    background-image: url("../images/facebook-clicked.png");	
+    background-image: url("../images/facebook-clicked.png");
 }
-
 a.gplus-icon {
     background-attachment: inherit;
     background-color: rgba(0, 0, 0, 0);
@@ -129,18 +127,18 @@ a.gplus-icon {
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100px;
-    width: 100px;
+    height: 90px;
     transform: rotate(-360deg);
-    transition: transform 0.7s ease-in-out 0.1s;    
+    transition: transform 0.7s ease-in-out 0.1s;
+    width: 90px;
 }
 a.gplus-icon:hover {
     background-image: url("../images/gplus-hover.png");
     transform: rotate(360deg);
-    transition: transform 0.7s ease-in-out 0s;    
+    transition: transform 0.7s ease-in-out 0s;
 }
 a.gplus-icon:active {
-    background-image: url("../images/gplus-clicked.png");	
+    background-image: url("../images/gplus-clicked.png");
 }
 /* ==========================================================================
    2. General - Setting up some base styles
@@ -153,6 +151,8 @@ html {
 }
 
 body {
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
     text-rendering: optimizeLegibility;
     height: 100%;
     max-height: 100%;
@@ -729,12 +729,13 @@ nav.fixedBottom ul li a:hover {
 
 /* The author credit area after the post */
 .post-footer {
+    border-top: 1px solid #FF4500;
+    display: inline-block;
+    margin: 4rem 0 0;
+    padding: 4rem 0 0;
     position: relative;
-    margin: 4rem 0 0 0;
-    padding: 4rem 0 70px 0;
-    border-top: #FF4500 1px solid;
+    width: 100%;
 }
-
 .post-footer h4 {
     font-size: 1.8rem;
     margin: 0;
@@ -748,19 +749,22 @@ nav.fixedBottom ul li a:hover {
 
 /* Create some space to the right for the share links */
 .post-footer .author {
-    margin-right: 180px;
-    font-family: 'Dancing Script', cursive;
+    display: inline-block;
+    float: left;
+    font-family: 'Dancing Script',cursive;
+    margin-right: 2%;
+    min-width: 48%;
 }
-
 /* Drop the share links in the space to the right.
    Doing it like this means it's easier for the author bio
    to be flexible at smaller screen sizes while the share
    links remain at a fixed width the whole time */
 .post-footer .share {
-    position: absolute;
-    top: 4rem;
-    right: 0;
-    width: 240px;
+    display: inline-block;
+    float: left;
+    margin-bottom: 1rem;
+    min-width: 300px;
+    width: 50%;
 }
 
 .post-footer .share a {
