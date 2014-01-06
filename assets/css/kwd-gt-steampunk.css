@@ -407,6 +407,14 @@ iframe, .fluid-width-video-wrapper {
     margin: 1.6em 0;
 }
 
+input:focus {
+    border: 2px double #7E5E11;
+    box-shadow: 0 0 3px #7E5E11;
+}
+input {
+    border: 2px inset #7E5E11;
+}
+
 /* When a video is inside the fitvids wrapper, drop the
 margin on the iframe, cause it breaks stuff. */
 .fluid-width-video-wrapper iframe {
