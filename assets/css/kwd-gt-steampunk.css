@@ -574,7 +574,7 @@ nav.fixedBottom ul li a:hover {
 
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
-    border-bottom: 1px solid #833B15;
+    border-bottom: 1px solid #FF0000;
     margin: 4rem auto;
     max-width: 40em;
     padding-bottom: 4rem;
@@ -601,11 +601,11 @@ nav.fixedBottom ul li a:hover {
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
 .post:after {
-    background: none repeat scroll 0 0 #E6CFB0;
-    border: 1px solid #833B15;
+    background: none repeat scroll 0 0 #36FC1F;
+    border: 1px solid #FF0000;
     border-radius: 100%;
     bottom: -5px;
-    box-shadow: 0 0 0 5px #D7BA92;
+    box-shadow: 0 0 0 5px #DBB6A7;
     content: "";
     display: block;
     height: 7px;
