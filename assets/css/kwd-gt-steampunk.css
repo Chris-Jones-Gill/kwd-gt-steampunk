@@ -406,7 +406,7 @@ iframe, .fluid-width-video-wrapper {
     display: block;
     margin: 1.6em 0;
 }
-
+/* Contact form */
 input {
     border: 2px inset #7E5E11;
     font-family: 'istok web',sans-serif;
@@ -414,6 +414,29 @@ input {
 input:focus {
     border: 2px double #7E5E11;
     box-shadow: 0 0 3px #7E5E11;
+}
+.formLabel {
+    display: inline-block;
+    margin-bottom: 1rem;
+    min-width: 7rem;
+    width: 16rem;
+}
+.tag-contact button {
+    background-color: #833B15;
+    border-color: black;
+    border-style: outset;
+    border-top: 2px outset;
+    color: #CEBDA1;
+    display: block;
+    font-family: 'istok web',sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3px;
+    vertical-align: middle;
+}
+.tag-contact button:active {
+    border-style: inset;
+    color: #2BFC47;
 }
 
 /* When a video is inside the fitvids wrapper, drop the
@@ -862,17 +885,18 @@ nav.fixedBottom ul li a:hover {
    ========================================================================== */
 
 .site-footer {
-    position: relative;
-    bottom: 2em;
-    margin: 8rem 0 0 0;
-    padding: 4rem 0;
+    background: none repeat scroll 0 0 #833B15;
     border-top: 1px solid #B3790B;
-    font-family: 'Open Sans', sans-serif;
+    bottom: 2em;
+    color: #D59057;
+    font-family: 'istok web',sans-serif;
     font-size: 1.3rem;
     line-height: 1.7em;
-    color: #D59057;
+    margin: 8rem 0 0;
+    padding: 4rem 0;
+    position: fixed;
     text-align: center;
-    background: none repeat scroll 0 0 #833B15;
+    width: 100%;
 }
 
 .site-footer a {
