@@ -763,6 +763,10 @@ nav.fixedBottom ul li a:hover {
     height: auto;
 }
 
+/* keep the hand-drawn social icons and links inline */
+.drawnSocialIconContainer > a {
+    display: inline-block;
+}
 /* The author credit area after the post */
 .post-footer {
     border-top: 1px solid #FF4500;
