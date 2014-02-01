@@ -530,9 +530,10 @@ nav.fixedBottom ul li a:hover {
     background-size: auto;
     transition: background-size ease-in-out 1s;
 }
-.site-head-content h1 {
-    font-family:  'Istok Web', sans-serif;;
-    color: white;
+.site-head-content h1, .site-head-content h1 a {
+    color: #FFFFFF;
+    font-family: 'Istok Web',sans-serif;
+    text-decoration: none;
     text-shadow: none;
 }
 .site-head-content h2 {
