@@ -30,6 +30,7 @@
         <div class="inner">
              <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.</section>
              <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">Ghost</a></section>
+             <section class="credits"><small>Header image by aleksander (olek) novak-zemplinski of <a href="http://biolinia.com/" target="_blank" title="Biolinia homepage, opens in a new window">biolinia.com</a></small></section>
         </div>
     </footer>
 	<nav class="fixedBottom">
@@ -43,7 +44,7 @@
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
-    {{! The main JavaScript file for Casper }}
+    {{! The main JavaScript file for the template }}
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 
