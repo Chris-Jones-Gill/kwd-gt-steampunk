@@ -482,10 +482,12 @@ nav.fixedBottom ul li {
 nav.fixedBottom ul li a {
     text-decoration: none;
     color: #603539;
+    transition: all 0.3s ease 0s;
 }
 nav.fixedBottom ul li a:hover {
     color: #2BFC47;
     text-shadow: 0 0 3px #833B15;
+    transition: all 0.3s ease 0s;
 }
 /* ==========================================================================
    3. Utilities - These things get used a lot
@@ -631,7 +633,14 @@ nav.fixedBottom ul li a:hover {
 
 .post-title a {
     color: #833B15;
+    text-shadow: 0 0 3px #fffaf0;
     text-decoration: none;
+    transition: text-shadow 0.5s ease 0s;
+}
+
+.post-title a:hover {
+    text-shadow: 0 0 3px #2bfc47;
+    transition: text-shadow 0.8s ease 0s;
 }
 
 .post-excerpt p {
