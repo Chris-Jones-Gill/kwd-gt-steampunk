@@ -1,10 +1,14 @@
+THIS PROJECT IS DEPRECATED
+==========================
+
+
 # kwd-gt-steampunk
 
 0.0.1-alpha
 
 *This is not a complete project, and is not production ready*
 
-A theme for [Ghost](http://github.com/tryghost/ghost/) from KISS Web Design.
+A theme for [Ghost](http://github.com/tryghost/ghost/).
 
 Initially based on the Casper theme - the default theme for Ghost - see below for the details.
 
